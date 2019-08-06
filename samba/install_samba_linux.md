@@ -58,3 +58,20 @@ sudo chmod 2770 <PATH>/<USER>
 sudo smbpasswd -a <USER>
 sudo smbpasswd -e <USER>
 ```
+
+### 8. Configurar compartilhadores samba em `/etc/samba/smb.conf`
+> adicionar ao fim do arquivo
+```sh
+[<USER>]
+    path = <PATH>/<USER>
+    browseable = no
+    read only = no
+    force create mode = 0660
+    force directory mode = 2770
+    valid users = <USER> @sadmin
+```
+
+### Final. Reiniciar serviço:
+```sh
+sudo systemctl restart nmbd
+```
