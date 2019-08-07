@@ -64,11 +64,11 @@ sudo smbpasswd -e <USER>
 ```sh
 [<USER>]
     path = <PATH>/<USER>
-    browseable = no
+    browseable = yes
     read only = no
     force create mode = 0660
     force directory mode = 2770
-    valid users = <USER> @sadmin
+    valid users = <USER> @sadmin <USER_NAME>
 ```
 
 ### Final. Reiniciar serviço:
