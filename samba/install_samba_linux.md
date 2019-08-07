@@ -53,7 +53,7 @@ sudo chown <USER>:sambashare <PATH>/<USER>
 sudo chmod 2770 <PATH>/<USER>
 ```
 
-### 7. Crar senha e ativar usuário
+### 7. Criar senha e ativar usuário
 ```sh
 sudo smbpasswd -a <USER>
 sudo smbpasswd -e <USER>
